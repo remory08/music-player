@@ -11,8 +11,8 @@ var stopSongs = function() {
   imfrom.pause();
 };
 
-var playb = document.getElementsByClassName('fa-play');
-var stop = document.getElementById('stop').style.visibility="hidden";
+
+var stop1 = document.getElementById('stop1').style.visibility="hidden";
 
 
 //definining variables to use for icons
@@ -24,10 +24,6 @@ var foods = document.getElementById('foods'),
 foods.addEventListener('click', function(){
     stopSongs();
     food.play();
-    stop.style.visibility= "visible";
-    stop.addEventListener('click', function () {
-      food.pause();
-      this.style.visibility= "hidden";
-      playb.style.visibility= "visible";
-    })
+    this.style.visibility="hidden";
+    document.getElementById('stop1').style.visibility= "visible";
 });
